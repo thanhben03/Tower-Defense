@@ -40,3 +40,5 @@ MonoBehaviour:
   events:
   - UI_BUILD_TOWER
   - BUILD_TOWER
+  - BUILD_DONE
+  - found overlap
