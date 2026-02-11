@@ -37,4 +37,6 @@ MonoBehaviour:
     categories:
     - 
     variableCategoryIDs: 00000000
-  events: []
+  events:
+  - UI_BUILD_TOWER
+  - BUILD_TOWER
