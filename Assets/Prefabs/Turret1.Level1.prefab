@@ -159,7 +159,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: Handle Look At
     startState: State 2
     states:
     - name: State 2
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: Trigger And Find Enemy
     startState: wait trigger
     states:
     - name: wait trigger
