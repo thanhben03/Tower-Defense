@@ -24,7 +24,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 51.59375
+        x: 99.59375
         y: 241.19531
         width: 100
         height: 16
@@ -76,7 +76,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 258.59375
+        x: 306.59375
         y: 177.51562
         width: 128.03
         height: 32
@@ -151,7 +151,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 239.35156
+        x: 287.35156
         y: 344.08594
         width: 139.66
         height: 32
@@ -226,7 +226,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 730.03125
+        x: 778.03125
         y: 60.789062
         width: 131.75
         height: 16
@@ -340,8 +340,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 693.14844
-        y: 290.03125
+        x: 773.9844
+        y: 191.4375
         width: 148.5
         height: 16
       isBreakpoint: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 496.95312
+        x: 544.9531
         y: 116.71094
         width: 121.71
         height: 32
@@ -598,7 +598,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 501.78125
+        x: 549.78125
         y: 305.6953
         width: 136.36
         height: 16
@@ -697,6 +697,125 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000100000000000000010000000000000001000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000100000001000000
+    - name: Upgrade Tower
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 772.21094
+        y: 321.33594
+        width: 147.83
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.CreateObject
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 9ff80c0260532301
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: spawnedTower
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: towerPrefablv2
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: spawnPoint
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: spawnPoint
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000000f000000110000001300000013000000130000001c0000001c00000013000000
+        paramName:
+        - gameObject
+        - delay
+        - detachChildren
+        - gameObject
+        - parent
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos: 000000000000000000000000010000000200000003000000000000000100000004000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000
     events:
     - name: SELECT_TILE
       isSystemEvent: 0
@@ -731,6 +850,9 @@ MonoBehaviour:
     - name: next
       isSystemEvent: 0
       isGlobal: 0
+    - name: UPGRADE TOWER
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: BUILD_TOWER
@@ -759,26 +881,17 @@ MonoBehaviour:
       linkConstraint: 0
       linkTarget: 0
       colorIndex: 0
+    - fsmEvent:
+        name: UPGRADE TOWER
+        isSystemEvent: 0
+        isGlobal: 1
+      toState: Upgrade Tower
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
-      floatVariables:
-      - useVariable: 1
-        name: clickTime
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
-        name: xPos
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
-        name: yPos
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
+      floatVariables: []
       intVariables: []
       boolVariables:
       - useVariable: 1
@@ -787,45 +900,21 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 1
-      stringVariables: []
+      stringVariables:
+      - useVariable: 1
+        name: towerName
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
       vector2Variables: []
-      vector3Variables:
-      - useVariable: 1
-        name: myPosition
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {x: 0, y: 0, z: 0}
-      - useVariable: 1
-        name: towerPos
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {x: 0, y: 0, z: 0}
-      colorVariables:
-      - useVariable: 1
-        name: rootColor
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {r: 0.33333334, g: 0.81568635, b: 0.29411766, a: 1}
-      - useVariable: 1
-        name: waitBuildColor
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {r: 0.9914521, g: 1, b: 0, a: 1}
+      vector3Variables: []
+      colorVariables: []
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
         name: GroundTile
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {fileID: 0}
-      - useVariable: 1
-        name: lastPress
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -854,6 +943,18 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: towerPrefablv2
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: towerPlaced
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -861,7 +962,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
